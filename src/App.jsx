@@ -5,7 +5,7 @@ import Food from './Components/Food'
 import Header from './Components/Header'
 import Recipes from './Components/Recipes'
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
     <div>
       <Header></Header>
       <Recipes></Recipes>
-      <ToastContainer/>
+      <ToastContainer />
 
       <div className='lg:flex lg:mx-10'>
         <div className='food-container lg:w-3/5 grid lg:grid-cols-2 gap-6 mx-10'>
@@ -51,24 +51,29 @@ function App() {
           <div className=''>
             <h2 className='text-center my-6 text-[24px] font-semibold'>Want to Cook: {cart.length}</h2>
             <hr className='mx-10' />
-            <table className='mt-6 text-[#878787] text-[16px] font-normal'>
+            <table className='mt-6 text-[#878787] text-xs font-normal'>
               <thead>
                 <tr>
                   <th className="py-2 px-4"></th>
-                  <th className="py-2 pr-10">Name</th>
+                  <th className="py-2 pr-10 lg:pl-4">Name</th>
                   <th className="py-2 px-10">Time</th>
                   <th className="py-2 px-10">Calories</th>
                   <th className="py-2 px-10"></th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th className="py-2 px-4">1</th>
-                  <th className="py-2 pr-10">Name</th>
-                  <th className="py-2 px-10">Time</th>
-                  <th className="py-2 px-10">Calories</th>
-                  <th className="py-2 px-4">Button</th>
-                </tr>
+                {
+                  cart.map((item, index) => (
+                    <tr className=' bg-gray-100'>
+                      <th className="py-2 ">{index+1}</th>
+                      <th className="py-2 ">{item.recipe_name}</th>
+                      <th className="py-2 ">{item.preparing_time}</th>
+                      <th className="py-2 ">{item.calories}</th>
+                      <th className="py-2 "><button className='btn btn-accent rounded-full '>Preparing</button></th>
+                    </tr>
+                  ))
+                }
+
               </tbody>
             </table>
           </div>
