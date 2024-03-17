@@ -12,6 +12,7 @@ function App() {
 
   const [foods, setFoods] = useState([]);
   const [cart, setCart] = useState([]);
+  const [prepareCart, setPrepareCart] = useState([]);
 
   useEffect(() => {
     fetch('./fakeData.json')
@@ -32,7 +33,17 @@ function App() {
       toast('Item already in the table');
     }
   }
-  console.log(cart);
+
+  const handlePreparing =(id) =>{
+    const newCart = cart.filter(item => item.recipe_id != id.recipe_id);
+    setCart(newCart);
+    const isPrepare = prepareCart.find((pFood) => pFood.recipe_id == id.recipe_id);
+    if(!isPrepare){
+      setPrepareCart([...prepareCart, id]);
+    }
+  }
+
+  
   return (
     <div>
       <Header></Header>
@@ -69,8 +80,38 @@ function App() {
                       <th className="py-2 ">{item.recipe_name}</th>
                       <th className="py-2 ">{item.preparing_time}</th>
                       <th className="py-2 ">{item.calories}</th>
-                      <th className="py-2 "><button className='btn btn-accent rounded-full '>Preparing</button></th>
+                      <th className="py-2 "><button onClick={() => handlePreparing(item)} className='btn btn-accent rounded-full '>Preparing</button></th>
                     </tr>
+                  ))
+                }
+
+              </tbody>
+            </table>
+          </div>
+
+          {/* ......... */}
+
+          <div className=''>
+            <h2 className='text-center my-6 text-[24px] font-semibold'>Currently cooking: {prepareCart.length}</h2>
+            <hr className='mx-10' />
+            <table className='mt-6 text-[#878787] text-xs font-normal'>
+              <thead>
+                <tr>
+                  <th className="py-2 px-10"></th>
+                  <th className="py-2 pr-10 lg:pl-4">Name</th>
+                  <th className="py-2 px-10">Time</th>
+                  <th className="py-2 px-10">Calories</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  prepareCart.map((item, index) => (
+                    <tr className=' bg-gray-100 w-full'>
+                      <th className="py-2 ">{index+1}</th>
+                      <th className="py-2 ">{item.recipe_name}</th>
+                      <th className="py-2 ">{item.preparing_time}</th>
+                      <th className="py-2 ">{item.calories}</th>
+                      </tr>
                   ))
                 }
 
