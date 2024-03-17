@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Food = ({ food }) => {
+const Food = ({ food, handleCookBtn }) => {
     let foodIngredients = food.ingredients;
-    console.log(foodIngredients);
+    // console.log(foodIngredients);
     return (
         <div className=''>
             <div class="card  bg-base-100 border ">
@@ -48,10 +48,11 @@ const Food = ({ food }) => {
                     </div>
 
                     <div class="card-actions mt-6">
-                        <button class="btn  cook-btn btn-accent rounded-full">Want to Cook</button>
+                        <button onClick={(e) => handleCookBtn(food)} class="btn  cook-btn btn-accent rounded-full">Want to Cook</button>
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };
