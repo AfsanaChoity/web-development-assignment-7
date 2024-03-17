@@ -1,9 +1,9 @@
-import React from 'react';
+
 
 
 const Header = () => {
     return (
-        <div className='lg:mx-20'>
+        <div className='lg:mx-20 mb-24'>
             {/* this is nav */}
             <div class="navbar bg-base-100 my-12">
                 <div class="navbar-start">
@@ -57,7 +57,7 @@ const Header = () => {
                 <div className="hero-content text-center text-neutral-content">
                     <div className="">
                         <h1 className="mb-6 text-3xl lg:text-5xl font-bold text-[#FFF] mx-1.5 lg:mx-auto lg:w-[897px]">Discover an exceptional cooking class tailored for you!</h1>
-                        <p className="mb-6 lg:w-[933px] text-xl font-normal text-[#FFF]">Embark on a culinary journey personalized to your tastes with our bespoke cooking classes. From mastering gourmet techniques to exploring international flavors, elevate your culinary skills in an experience tailored exclusively for you.</p>
+                        <p className="mb-6 lg:w-[933px] text-xs font-normal text-[#FFF] opacity-80">Embark on a culinary journey personalized to your tastes with our bespoke cooking classes. From mastering gourmet techniques to exploring international flavors, elevate your culinary skills in an experience tailored exclusively for you.</p>
                         <button className="btn btn-accent mr-3 rounded-full">Explore Now</button>
                         <button className="btn btn-outline btn-accent ml-3 rounded-full">Our Feedback</button>
                     </div>

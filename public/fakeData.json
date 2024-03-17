@@ -15,8 +15,8 @@
     },
     {
         "recipe_id": 2,
-        "recipe_name": "https://www.inspiredtaste.net/wp-content/uploads/2011/12/Mushroom-Risotto-Recipe-1-1200.jpg",
-        "recipe_image": "mushroom_risotto.jpg",
+        "recipe_name": "Mushroom Risotto",
+        "recipe_image": "https://www.inspiredtaste.net/wp-content/uploads/2011/12/Mushroom-Risotto-Recipe-1-1200.jpg",
         "short_description": "Indulge in the richness of creamy risotto with savory mushroom flavors.",
         "ingredients": [
             "300 g Arborio rice",
@@ -29,8 +29,8 @@
     },
     {
         "recipe_id": 3,
-        "recipe_name": "https://cookieandkate.com/images/2021/07/classic-margherita-pizza.jpg",
-        "recipe_image": "margherita_pizza.jpg",
+        "recipe_name": "Classic Margherita Pizza",
+        "recipe_image": "https://cookieandkate.com/images/2021/07/classic-margherita-pizza.jpg",
         "short_description": "Savor the simplicity of a classic Margherita pizza with fresh tomato, basil, and mozzarella.",
         "ingredients": [
             "300 g pizza dough",
@@ -71,14 +71,14 @@
     },
     {
         "recipe_id": 6,
-        "recipe_name": "Fresh Berry Smoothie Bowl",
+        "recipe_name": "Berry Smoothie Bowl",
         "recipe_image": "https://www.purelykaylie.com/wp-content/uploads/2021/05/berry-smoothie-bowl-5.jpg",
         "short_description": "Start your day on a refreshing note with a colorful and nutritious berry smoothie bowl.",
         "ingredients": [
             "1 cup mixed berries",
             "1 banana",
             "100 ml almond milk",
-            "Granola and fresh fruits for topping"
+            "Granola and fresh fruits"
         ],
         "preparing_time": "10 min",
         "calories": "200 calories"
