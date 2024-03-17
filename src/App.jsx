@@ -97,16 +97,16 @@ function App() {
             <table className='mt-6 text-[#878787] text-xs font-normal'>
               <thead>
                 <tr>
-                  <th className="py-2 px-10"></th>
-                  <th className="py-2 pr-10 lg:pl-4">Name</th>
-                  <th className="py-2 px-10">Time</th>
-                  <th className="py-2 px-10">Calories</th>
+                  <th className="py-2 px-12"></th>
+                  <th className="py-2 pr-12 lg:pl-4">Name</th>
+                  <th className="py-2 px-12">Time</th>
+                  <th className="py-2 px-12 ">Calories</th>
                 </tr>
               </thead>
               <tbody>
                 {
                   prepareCart.map((item, index) => (
-                    <tr className=' bg-gray-100 w-full'>
+                    <tr className=' bg-gray-100'>
                       <th className="py-2 ">{index+1}</th>
                       <th className="py-2 ">{item.recipe_name}</th>
                       <th className="py-2 ">{item.preparing_time}</th>
